@@ -1,9 +1,10 @@
 
+
 resource "azurerm_synapse_workspace" "workspace" {
   name                                 = var.workspace_name
   resource_group_name                  = var.resource_group_name
   location                             = var.location
-  storage_data_lake_gen2_filesystem_id = var.data_lake_gen2_filesystem_id
+  storage_data_lake_gen2_filesystem_id = var.storage_data_lake_gen2_filesystem_id
   sql_administrator_login              = var.settings.sql_administrator_login
   sql_administrator_login_password     = lookup(var.settings, "sql_administrator_login_password", random_password.sql_admin.0.result) # Allows either random or input param
   sql_identity_control_enabled         = lookup(var.settings, "sql_identity_control_enabled", null)

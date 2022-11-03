@@ -1,0 +1,10 @@
+<!-- BEGIN_TF_DOCS -->
+data_lake_gen2_filesystem_id         = "type"
+keyvault_id                          = ""
+location                             = "uksouth"
+resource_group_name                  = ""
+settings                             = {}
+storage_data_lake_gen2_filesystem_id = ""
+tags                                 = {}
+workspace_name                       = ""
+<!-- END_TF_DOCS -->
