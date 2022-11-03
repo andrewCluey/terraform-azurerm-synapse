@@ -31,13 +31,12 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_data_lake_gen2_filesystem_id"></a> [data\_lake\_gen2\_filesystem\_id](#input\_data\_lake\_gen2\_filesystem\_id) | description | `string` | n/a | yes |
 | <a name="input_keyvault_id"></a> [keyvault\_id](#input\_keyvault\_id) | description | `string` | `""` | no |
 | <a name="input_location"></a> [location](#input\_location) | description | `string` | `"uksouth"` | no |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | description | `string` | n/a | yes |
 | <a name="input_settings"></a> [settings](#input\_settings) | description | `any` | `{}` | no |
 | <a name="input_storage_data_lake_gen2_filesystem_id"></a> [storage\_data\_lake\_gen2\_filesystem\_id](#input\_storage\_data\_lake\_gen2\_filesystem\_id) | description | `string` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | description | `map` | `{}` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | description | `map(any)` | `{}` | no |
 | <a name="input_workspace_name"></a> [workspace\_name](#input\_workspace\_name) | description | `string` | n/a | yes |
 
 ## Outputs

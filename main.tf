@@ -8,7 +8,7 @@ resource "azurerm_synapse_workspace" "workspace" {
   sql_administrator_login              = var.settings.sql_administrator_login
   sql_administrator_login_password     = lookup(var.settings, "sql_administrator_login_password", random_password.sql_admin.0.result) # Allows either random or input param
   sql_identity_control_enabled         = lookup(var.settings, "sql_identity_control_enabled", null)
-  managed_virtual_network_enabled      = lookup(var.settings, "managed_virtual_network_enabled", false) 
+  managed_virtual_network_enabled      = lookup(var.settings, "managed_virtual_network_enabled", false)
   managed_resource_group_name          = lookup(var.settings, "managed_resource_group_name", null)
   public_network_access_enabled        = false
   tags                                 = var.tags
@@ -44,7 +44,7 @@ resource "azurerm_synapse_workspace" "workspace" {
 
     content {
       key_versionless_id = var.settings.customer_managed_key_versionless_id
-      key_name = lookup(var.settings, "key_name", null)
+      key_name           = lookup(var.settings, "key_name", null)
     }
   }
 

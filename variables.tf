@@ -14,11 +14,6 @@ variable "location" {
   default     = "uksouth"
 }
 
-variable "data_lake_gen2_filesystem_id" {
-  type        = string
-  description = "description"
-}
-
 variable "storage_data_lake_gen2_filesystem_id" {
   type        = string
   description = "description"
@@ -37,7 +32,7 @@ variable "keyvault_id" {
 }
 
 variable "tags" {
-  type        = map
+  type        = map(any)
   description = "description"
   default     = {}
 }
