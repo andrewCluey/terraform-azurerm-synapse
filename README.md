@@ -1,31 +1,44 @@
 <!-- BEGIN_TF_DOCS -->
-## Requirements
+# terraform-azurerm-synapse
+Creates a new Synapse workspace with options to create.....
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | 3.20.0 |
-| <a name="requirement_random"></a> [random](#requirement\_random) | 3.4.3 |
+Future changes to include:
+  - Update Azurerm provider to use 3.29.x, Additional attributes available.
 
-## Providers
+## Example - default
+```hcl
 
-| Name | Version |
-|------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.20.0 |
-| <a name="provider_random"></a> [random](#provider\_random) | 3.4.3 |
+```
 
-## Modules
+## Example -
+```hcl
 
-No modules.
+```
 
-## Resources
+## Example - Parametrised deployment using .tfvars variable file.
+```hcl
+provider "azurerm" {
+  features {}
+}
+variable "workspace_name" {
+  type        = string
+}
+```
 
-| Name | Type |
-|------|------|
-| [azurerm_key_vault_secret.sql_admin](https://registry.terraform.io/providers/hashicorp/azurerm/3.20.0/docs/resources/key_vault_secret) | resource |
-| [azurerm_key_vault_secret.sql_admin_password](https://registry.terraform.io/providers/hashicorp/azurerm/3.20.0/docs/resources/key_vault_secret) | resource |
-| [azurerm_key_vault_secret.synapse_name](https://registry.terraform.io/providers/hashicorp/azurerm/3.20.0/docs/resources/key_vault_secret) | resource |
-| [azurerm_synapse_workspace.workspace](https://registry.terraform.io/providers/hashicorp/azurerm/3.20.0/docs/resources/synapse_workspace) | resource |
-| [random_password.sql_admin](https://registry.terraform.io/providers/hashicorp/random/3.4.3/docs/resources/password) | resource |
+### TFVARS file. Can be used to provide different input parameters when deploying to multiple environments.
+```hcl
+workspace_name                       = "demo-syn-name"
+keyvault_id                          = "uiyiuy-subuyuhoi/keyvault/id"
+location                             = "uksouth"
+resource_group_name                  = "rg-example-data"
+settings                             = {}
+storage_data_lake_gen2_filesystem_id = "ijoi-ihiuhiu/storage/g2sahnsstorageaccountid"
+tags                                 = {
+    environment = "Dev",
+    data_owner = "clureA"
+}
+````
+
 
 ## Inputs
 

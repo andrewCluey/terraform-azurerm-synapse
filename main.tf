@@ -1,3 +1,13 @@
+/**
+ * # terraform-azurerm-synapse
+ * Creates a new Synapse workspace with options to create.....
+ *
+ *
+ *
+ * Future changes to include:
+ *   - Update Azurerm provider to use 3.29.x, Additional attributes available.
+ *   
+ */
 
 
 resource "azurerm_synapse_workspace" "workspace" {
@@ -61,8 +71,6 @@ resource "azurerm_synapse_workspace" "workspace" {
   }
 
 }
-
-
 
 # random password if not added as an input param.
 resource "random_password" "sql_admin" {
